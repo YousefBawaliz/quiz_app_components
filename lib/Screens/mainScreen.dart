@@ -67,7 +67,7 @@ class _MainMenuState extends State<MainMenu> {
             ),
             const Center(
               child: Text(
-                "Made with ❤ by Mouheb Boucherb",
+                "PlaceHolder Screen",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,

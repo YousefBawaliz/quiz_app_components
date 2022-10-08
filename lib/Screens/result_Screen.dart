@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/main.dart';
 
+import '../Data/Placement_test.dart';
+
 class ResultScreen extends StatefulWidget {
   final int score;
   const ResultScreen(this.score, {super.key});
@@ -18,13 +20,23 @@ class _ResultScreenState extends State<ResultScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Text(
+            textAlign: TextAlign.center,
+            "Your Score is: ${widget.score}/${questions.length}",
+            style: TextStyle(
+                fontSize: 45, fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+          SizedBox(
+            height: 20,
+          ),
           Center(
             child: Text(
+              textAlign: TextAlign.center,
               widget.score >= 50
-                  ? "You're level is advanced"
-                  : "Your level is beginner",
+                  ? "You're level is: advanced"
+                  : "Your level is: beginner",
               style: TextStyle(
-                  fontSize: 50,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
@@ -40,7 +52,7 @@ class _ResultScreenState extends State<ResultScreen> {
                       builder: (context) => MyApp(),
                     ));
               }),
-              child: Text("proceed to the lesseons"))
+              child: Text("Click here to start Learning now!"))
         ],
       ),
     );
